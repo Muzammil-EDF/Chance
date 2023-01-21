@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <title>Searchbar</title>
+    <style>
+        .whole {
+            border: 2px solid red;
+            width: 30vw;
+            padding: 1em;
+        }
+
+        .container {
+            border: 2px solid black;
+            /* border-radius: 40px; */
+            display: flex;
+            background-color: black;
+
+        }
+
+        .container input {
+            flex-grow: 1;
+            border: none;
+            padding: 10px 0px;
+            padding-left: 10px;
+            border: none;
+            font-size: large;
+            font-family: 'Ubuntu', sans-serif;
+            background-color: transparent;
+            border-radius: 0;
+        }
+
+        .btn {
+            padding: 8px 10px;
+            border-radius: 20px;
+            font-size: 20px;
+            align-items: center;
+
+        }
+
+        .btn:hover {
+
+            background-color: rgb(35, 26, 209);
+            color: red;
+            border: none;
+            padding: 10px 12px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="whole">
+        <div class="container">
+            <input type="text" placeholder="search here" class="search">
+            <a href="#" class="btn"> <i class="fa fa-search"></i>
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

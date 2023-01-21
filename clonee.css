@@ -1,0 +1,239 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url('imge/pexels-jess-bailey-designs-743986.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 5000px; */
+    /* background-color: rgb(25, 189, 17); */
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.contain {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.list {
+    position: absolute;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    background-color: black;
+    color: white;
+    width: 40%;
+    padding: 8px 4px;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+.list li {
+    /* border: 2px solid red; */
+    cursor: pointer;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list li:hover {
+    background-color: #929da4;
+}
+
+.big {
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 80px;
+}
+
+.left {
+
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right {
+
+    /* border: 2px solid green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left select {
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: black;
+    color: white;
+}
+
+.right select {
+    padding: 5px 5px;
+    border-radius: 5px;
+
+}
+
+.mid {
+
+    margin-right: 230px;
+}
+
+.mid input {
+    padding: 8px 5px;
+    width: 210%;
+}
+
+.hea {
+    /* border: 2px solid red; */
+    position: relative;
+    top: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hea h1 {
+    color: rgb(48, 53, 53);
+    font-size: 80px;
+
+}
+
+.center {
+    /* border: 2px solid green; */
+    text-align: center;
+}
+
+.center h1 {
+    /* color: white; */
+    width: 30%;
+    margin: auto;
+    margin-top: 30px;
+    background-image: linear-gradient(#02aab0, #00cdac);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.center button {
+    cursor: pointer;
+    color: white;
+    margin-top: 60px;
+    padding: 8px 100px;
+    border-radius: 10px;
+    background-image: linear-gradient(to top right, #bdc3c7 25%, #2c3e50);
+    font-size: 18px;
+    border: none;
+}
+
+.fash {
+    /* border: 2px solid black; */
+    position: relative;
+    top: 43px;
+}
+
+.fash h1 {
+    text-align: center;
+}
+
+.boxes {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 91px;
+    flex-wrap: wrap;
+}
+
+#box1 {
+    cursor: pointer;
+    background-color: rgb(223 220 220);
+    font-size: 20px;
+    width: 140px;
+    text-align: center;
+    padding: 47px 4px;
+    border-top-right-radius: 20px;
+    align-content: center;
+}
+
+#box2 {
+    cursor: pointer;
+    background-color: rgb(223 220 220);
+    font-size: 20px;
+    width: 140px;
+    text-align: center;
+    padding: 47px 4px;
+    border-top-right-radius: 20px;
+}
+
+#box3 {
+    cursor: pointer;
+    background-color: rgb(223 220 220);
+    font-size: 20px;
+    width: 140px;
+    text-align: center;
+    padding: 47px 4px;
+    border-top-right-radius: 20px;
+}
+
+.whole {
+    /* border: 2px solid red; */
+    width: 30vw;
+    padding: 1em;
+}
+
+.container {
+    /* border: 2px solid black; */
+    /* border-radius: 40px; */
+    display: flex;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.container input {
+    flex-grow: 1;
+    border: none;
+    padding: 10px 0px;
+    padding-left: 10px;
+    border: none;
+    font-size: large;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.btn {
+    padding: 8px 10px;
+    font-size: 20px;
+    align-items: center;
+
+}
+
+.btn:hover {
+
+    background-image: linear-gradient(to top right, #ff00f7, #bf00ff 70%);
+    /* background-color: rgb(35, 26, 209); */
+    color: white;
+    border: none;
+    /* padding: 10px 12px; */
+
+}
+
+@media screen(min-width:900px) {
+    .contain {
+        width: 100%;
+    }
+
+    .boxes {
+        width: 100%;
+    }
+
+    .big {
+        width: 100%;
+        border: 8dpx solid red;
+    }
+}

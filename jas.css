@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 5px dotted yellowgreen; */
+}
+body{
+    background-image: url('imge/pexels-adrian-newell-9725979.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: snow;
+    min-height: 100vh;
+}
+.box{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+button{
+    padding: 1em 2em;
+    margin-top: 1rem;
+    border-radius: 10px;
+    border: none;
+    color: snow;
+    background-color: firebrick;
+}
+.welcome{
+    position: absolute;
+    top: 80%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}

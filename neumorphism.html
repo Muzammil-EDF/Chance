@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            place-items: center;
+            background-image: url('imge/pexels-skitterphoto-584366.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .card {
+
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2.8px);
+            -webkit-backdrop-filter: blur(2.8px);
+            border: 1px solid rgba(255, 255, 255, 0.29);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1em;
+            line-height: 2;
+            transition: all 500ms ease;
+            /* border-radius: 25px; */
+            height: 67px;
+            overflow: hidden;
+
+        }
+
+        .card:hover {
+            padding: 3rem 3rem;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0.8px);
+            -webkit-backdrop-filter: blur(0.8px);
+            border: 1px solid rgba(255, 255, 255, 0.29);
+        }
+
+        .card h1 {
+            /* border: 1px solid black; */
+            color: crimson;
+            padding: 0 1.5em;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(0.8px);
+            -webkit-backdrop-filter: blur(0.8px);
+            border: 1px solid rgba(255, 255, 255, 0.29);
+        }
+
+        /* --------------------This is input type --------------------------- */
+
+        .card input {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2.8px);
+            -webkit-backdrop-filter: blur(2.8px);
+            border: 1px solid rgba(255, 255, 255, 0.29);
+            width: 100%;
+            /* border: none; */
+            outline: none;
+            padding: 0.8em 0px 0.8em 10px;
+        }
+
+        /* ------------------This is the label of all div's------------------------ */
+        .card label {
+            padding-left: 10px;
+            color: crimson;
+        }
+
+
+        /* --------------------This is input class --------------------------- */
+
+        .card .input {
+            /* border: 1px solid black; */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* --------------------This is password class --------------------------- */
+
+        .card .password {
+            /* border: 1px solid black; */
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .card .click {
+            /* border: 1px solid black; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1.3rem;
+            width: 100%;
+        }
+
+        .card .click button {
+            width: 100%;
+            color: crimson;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2.8px);
+            -webkit-backdrop-filter: blur(2.8px);
+            border: 1px solid rgba(255, 255, 255, 0.29);
+            /* border: none; */
+            padding: 0.6em 0;
+            transition: all 500s ease;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="action.php">
+
+        <div class="card">
+            <h1>Login Form</h1>
+            <div class="input">
+                <label for="User Name">User Name:</label>
+                <input type="text" name="Name" id="">
+            </div>
+            <div class="password">
+                <label for="Password">Password:</label>
+                <input type="password" name="password" id="">
+            </div>
+            <div class="click">
+                <button>Login</button>
+            </div>
+        </div>
+
+    </form>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+
+</html>

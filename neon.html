@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 20px 5px 20px;
+            background-color: black;
+            position: absolute;
+            width: 100%;
+        }
+
+        nav {
+            /* border: 2px solid rgb(128, 0, 0); */
+            display: flex;
+            align-items: center;
+            padding: 4px 4px;
+        }
+
+        nav ul {
+            display: flex;
+            column-gap: 15px;
+            list-style: none;
+        }
+
+        nav ul li {
+            color: white;
+            /* background-color: aqua; */
+            border-radius: 5px;
+            padding: 5px 8px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 2px solid green; */
+        }
+
+        .logo img {
+            margin-top: 5px;
+            max-width: 90px;
+            max-height: 90px;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* border: 2px solid gold; */
+        }
+
+        .buttons button {
+            border: none;
+            color: white;
+            border-radius: 5px;
+            background-image: linear-gradient(to top, rgb(255, 0, 93) 30%, rgb(0 0 255));
+            margin: 5px 5px;
+            height: 30px;
+            width: 74px;
+        }
+
+        section {
+            background-image: linear-gradient(to top,purple, black);
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .leftside {
+            color: white;
+            border: 2px solid blue;
+            width: 500px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            margin-top: 20px;
+        }
+        .leftside h1{
+            padding: 20px 5px;
+        }
+        .leftside button{
+            height: 30px;
+            width: 100px;
+            margin-top: 30px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-image: linear-gradient(to top, rgb(255, 0, 93) 30%, rgb(0 0 255));
+        }
+        
+        .pic img {
+            margin-top: 20px;
+            filter: invert(100);
+            border: 2px solid blue;
+            display: flex;
+            align-items: center;
+            max-height: 400px;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="imge/pngwing.com (6).png" alt=""></div>
+        <nav>
+            <ul>
+                <li>Maintainance</li>
+                <li>collection</li>
+                <li>Roadmap</li>
+                <li>Artists</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+        <div class="buttons">
+            <button>Login</button>
+            <button>Sign up</button>
+        </div>
+    </header>
+    <section>
+        <div class="leftside">
+            <h1>Your Best NFT,  Buying and <br> Selling Platform</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id corrupti eum corporis eos et dolorum
+                laudantium quia voluptas veritatis aperiam. Voluptatum, nam saepe! Omnis nobis accusantium placeat
+                aspernatur, officia autem.</p>
+                <button>Discover Now</button>
+        </div>
+        <div class="pic"><img src="imge/burger logo.png" alt=""></div>
+    </section>
+</body>
+
+</html>

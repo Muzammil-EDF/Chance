@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: whitesmoke;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /* border: 2px solid black; */
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 25% 74.5%;
+            gap: 10px;
+            padding: 10px;
+        }
+
+        @media (max-width:800px) {
+            .container {
+                grid-template-columns: 25% 74.5%;
+            }
+        }
+
+        /* --------------------------------------LEFT-BOX------------------------------------------------ */
+
+
+        .left-box {
+            display: grid;
+            grid-template-rows: 1fr 1fr 2fr;
+            box-shadow: 3px 0px 6px grey;
+            background-color: white;
+            height: 100vh;
+            width: 100%;
+        }
+
+
+        /* --------------------------------------left-box 1------------------------------------------------ */
+
+
+        #b1 {
+            /* border: 2px solid red; */
+            position: relative;
+        }
+
+        .heading {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        .heading h3 {
+            color: white;
+        }
+
+        #b1 img {
+            width: 100%;
+            display: block;
+        }
+
+
+        /* --------------------------------------left-box 2------------------------------------------------ */
+
+
+        #b2 {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            position: relative;
+            font-family: sans-serif;
+        }
+
+        #b2 ul {
+            /* border: 4px solid rgb(179, 168, 12); */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            list-style: none;
+            margin-left: 10px;
+        }
+
+        #b2 ul li {
+            /* border: 2px solid blue; */
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        #b2 ul li i {
+            color: blueviolet;
+            margin-right: 15px;
+        }
+
+
+        /* --------------------------------------left-box 3------------------------------------------------ */
+
+
+        #b3 {
+            /* border: 2px solid rgb(0, 247, 255); */
+            /* position: relative; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+
+        .b3-inner {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            width: 80%;
+            margin-left: 8px;
+        }
+
+        .b3-inner i {
+            color: blueviolet;
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+        #b3 ul {
+            /* border: 2px solid blue; */
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin-left: 8px;
+        }
+
+        #b3 ul li meter {
+            color: blueviolet;
+            height: 28px;
+            width: 93%;
+            font-size: 35px;
+        }
+
+
+        /* --------------------------------------RIGHT-BOX------------------------------------------------ */
+
+
+        .right-box {
+            display: grid;
+            gap: 10px;
+            grid-template-rows: 85% 13%;
+        }
+
+
+        /* --------------------------------------Right-Upper-box------------------------------------------------ */
+
+
+        .right-upper-box {
+            /* border: 2px solid red; */
+            background-color: white;
+            box-shadow: 3px 0px 6px grey;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .right-up {
+            /* border: 2px solid green; */
+            width: 80%;
+        }
+
+        /* --------------------------------------Right-Up-1------------------------------------------------ */
+
+        #right-up-1 {
+            display: flex;
+            align-items: center;
+            padding: 5px 0px 5px 8px;
+        }
+
+        #right-up-1 i {
+            font-size: 30px;
+            margin-right: 15px;
+            color: blueviolet;
+        }
+
+        /* --------------------------------------Right-Up-2------------------------------------------------ */
+
+        #right-up-2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100px;
+            padding: 0px 0px 0px 8px;
+        }
+
+        #right-up-2 p {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 16px;
+            width: 80;
+        }
+
+        @media (max-width:800px) {
+            .right-up {
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+
+        #right-up-2 i {
+            color: blueviolet;
+            margin-right: 15px;
+        }
+
+        /* --------------------------------------Right-Up-3------------------------------------------------ */
+
+        #right-up-3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100px;
+            padding: 0px 0px 0px 8px;
+        }
+
+        #right-up-3 p {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 16px;
+        }
+
+        #right-up-3 i {
+            color: blueviolet;
+            padding: 10px 0px 15px 0px;
+            margin-right: 15px;
+        }
+
+        /* --------------------------------------Right-Up-4------------------------------------------------ */
+
+        #right-up-4 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 65px;
+            padding: 0px 0px 0px 8px;
+        }
+
+        #right-up-4 p {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 18px;
+        }
+
+        #right-up-4 i {
+            color: blueviolet;
+            padding: 10px 0px 14px 0px;
+            margin-right: 15px;
+        }
+
+        .right-lower-box {
+            background-color: white;
+            box-shadow: 3px 0px 6px grey;
+            padding: 25px 0px 0px 30px;
+        }
+
+        #right-down {
+            display: flex;
+            align-items: center;
+        }
+
+        #right-down i {
+            color: blueviolet;
+            margin-right: 15px;
+        }
+
+        #right-down p {
+            font-family: 'Darker Grotesque', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!----------------------------------------LEFT-BOX-------------------------------------------------->
+
+        <div class="left-box">
+            <!----------------------------------------left-box 1-------------------------------------------------->
+            <div id="b1">
+                <img src="imge/pexels-stephan-seeber-1261728.jpg" alt="">
+                <div class="heading">
+                    <h3>Jane Doe</h3>
+                </div>
+            </div>
+            <!----------------------------------------left-box 2-------------------------------------------------->
+            <div id="b2">
+                <ul>
+                    <li><i class="fa fa-briefcase"></i>Designer</li>
+                    <li><i class="fa fa-home"></i>London, UK</li>
+                    <li><i class="fa fa-envelope"></i>es@gmail.com</li>
+                    <li><i class="fa fa-phone"></i>1223334444</li>
+                </ul>
+            </div>
+            <!----------------------------------------left-box 3-------------------------------------------------->
+            <div id="b3">
+                <div class="b3-inner">
+                    <i class="fa fa-star"></i>
+                    <h2>
+                        Skills</h2>
+                </div>
+                <ul>
+                    <li> <label for="fuel">Adobe Photoshop</label>
+                        <br>
+                        <meter id="fuel" min="0" max="100" value="90">
+                        </meter>
+                    </li>
+                    <li> <label for="fuel">photography</label>
+                        <br>
+                        <meter id="fuel" min="0" max="100" value="80">
+                        </meter>
+                    </li>
+                    <li> <label for="fuel">Illustrator</label>
+                        <br>
+                        <meter id="fuel" min="0" max="100" value="75">
+                        </meter>
+                    </li>
+                    <li> <label for="fuel">Media</label>
+                        <br>
+                        <meter id="fuel" min="0" max="100" value="50">
+                        </meter>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- --------------------------------------RIGHT-BOX------------------------------------------------ -->
+
+        <div class="right-box">
+            <!----------------------------------Right-Upper-Box--------------------------------------------->
+            <div class="right-upper-box">
+                <!----------------------------------Right-Up-1--------------------------------------------->
+
+                <div class="right-up" id="right-up-1">
+                    <i class="fa fa-briefcase"></i>
+                    <h1>Work Experience</h1>
+                </div>
+                <!----------------------------------Right-Up-2--------------------------------------------->
+
+                <div class="right-up" id="right-up-2">
+                    <h4>Front End Developer / w3schools.com</h4>
+                    <!-- <p>Front End Developer / w3schools.com</p> -->
+                    <p><i class="fa fa-calendar"></i>Jan 2021-Current</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Expedita alias itaque, vel quidem molestias enim laudantium culpa
+                        ratione voluptatum porro? quaerat ea nemo ratione
+                        similique repudia</p>
+                </div>
+                <!----------------------------------Right-Up-3--------------------------------------------->
+
+                <div class="right-up" id="right-up-3">
+                    <h4>Web Developer / something.com</h4>
+                    <p><i class="fa fa-calendar"></i>March 2028-Dec-2021</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Expedita alias itaque, vel quidem molestias enim laudantium culpa
+                        ratione voluptatum porro? quaerat ea nemo ratione
+                        similique repudia</p>
+                </div>
+                <!----------------------------------Right-Up-4--------------------------------------------->
+
+                <div class="right-up" id="right-up-4">
+                    <h4>Graphic Designer / designsomething.com</h4>
+                    <p><i class="fa fa-calendar"></i>June 2010-March-2012</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores dicta Lorem ipsum</p>
+                </div>
+            </div>
+            <!-------------------------------------Right-Lower-Box------------------------------------------>
+            <div class="right-lower-box">
+                <div id="right-down">
+                    <h2><i class="fa fa-sun-o"></i>Education</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

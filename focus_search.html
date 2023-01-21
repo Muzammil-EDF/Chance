@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blueviolet;
+        }
+
+        .search {
+            background-color: whitesmoke;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 50px;
+            height: 40px;
+        }
+
+        .bar {
+            outline: 0;
+            border: none;
+            border-radius: 30px;
+            background: none;
+            width: 0;
+            line-height: 40px;
+            transition: 0.5s;
+            overflow: hidden;
+        }
+        
+        .btn {
+            background: none;
+            height: 40px;
+            width: 40px;
+            border-radius: 30px;
+            border: none;
+            position: relative;
+            right: 4px;
+            color: black;
+        }
+        
+        .search:hover .bar {
+            width: 300px;
+            padding: 0px 8px;
+        }
+        
+        .search:hover .btn {
+            cursor: pointer;
+            color: white;
+            background-image: linear-gradient(to top right, #d600cf, #9f00d4 70%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="search">
+
+        <form action="https://www.google.com/search" method="get">
+            <input type="text" name="" id="" placeholder="search" class="bar">
+            <button class="btn">
+                <i class="fa fa-search"></i>
+            </button>
+        </form>
+    </div>
+</body>
+
+</html>

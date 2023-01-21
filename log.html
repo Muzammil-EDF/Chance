@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: url('imge/orange-g0797bdb11_1280.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+
+        /* Add some style to the form */
+        form {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 2em;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            /* From https://css.glass */
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(2px);
+            -webkit-backdrop-filter: blur(2px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* transition: transform 1.8s linear;
+            transform-style: preserve-3d; */
+        }
+
+        form h2 {
+            color: #E6E6E6;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        /* form:hover {
+            transform: rotateY(360deg);
+        } */
+
+        input[type="text"],
+        input[type="password"] {
+            width: 80%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            outline: none;
+            font-family: monospace;
+        }
+
+        button[type="submit"] {
+            width: 50%;
+            background-color: #AA0000;
+            color: white;
+            padding: 0.5em;
+            margin: 8px 0;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: large;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Add a login form -->
+    <form>
+        <h2>Login Form</h2>
+        <p>
+            <input placeholder="Username" type="text" id="username" name="username" required>
+        </p>
+        <p>
+            <input placeholder="Password" type="password" id="password" name="password" required>
+        </p>
+        <p>
+            <button type="submit">Log in</button>
+        </p>
+    </form>
+    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll("form"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+</body>
+
+</html>

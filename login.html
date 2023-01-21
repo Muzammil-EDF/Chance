@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-image: linear-gradient(black, rgb(234, 12, 12));
+        }
+
+        header {
+            /* border: 2px solid green; */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 25px 15px 150px;
+            /* box-shadow: 0px 0px 35px -16px black; */
+
+        }
+
+        .logo {
+            /* border: 2px solid blue; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            filter: invert(100);
+        }
+
+        nav {
+            color: white;
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+        }
+
+        nav ul {
+            cursor: pointer;
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            border-radius: 20px;
+            margin: 0px 13px;
+            padding: 5px 12px;
+        }
+
+        nav ul li:hover {
+            color: white;
+            background-image: linear-gradient(to right, red, rgb(182, 4, 4));
+        }
+
+        .searchbar {
+            /* border:  2px solid red; */
+            display: flex;
+            align-items: center;
+            background-color: whitesmoke;
+            border-radius: 20px;
+        }
+
+        .searchbar input {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            color: black;
+            background: transparent;
+            border: transparent;
+            padding: 10px 10px;
+            margin-right: 2px;
+            width: 300px;
+
+        }
+
+        .searchbar i {
+            /* border:  2px solid rgb(0, 8, 255); */
+            background-image: linear-gradient(to right, red, rgb(182, 4, 4));
+            color: white;
+            padding: 10px 10px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        section {
+            margin: auto;
+            width: 90%;
+
+        }
+
+        .boxes {
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .box1 {
+            color: white;
+
+            width: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            text-align: justify;
+            /* border: 2px solid purple; */
+        }
+
+        .box1 h1 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .borgor {
+            color: red;
+        }
+
+        .box1 p {
+            color: rgb(255, 213, 0);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="imge/burger logo.png" alt=""></div>
+        <div class="searchbar">
+            <input type="text" placeholder="search your borgor here">
+            <i class="fa fa-search"></i>
+        </div>
+        <nav>
+            <ul>
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li>SERVICES</li>
+                <li>CONTACT US</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="boxes">
+            <div class="box1">
+                <h1>Welcome to <span class="borgor">Borgor Port</span>
+                </h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro, exercitationem laboriosam dicta at
+                    repellendus ipsam magnam ipsum non quisquam tempore.</p>
+            </div>
+            <div class="box2">
+                <img src="imge/pngwing.com (4).png" alt="">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

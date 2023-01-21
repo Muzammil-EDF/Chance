@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        
+        .navbar {
+            background-color: rgb(0, 0, 0);
+            border-radius: 25px;
+        }
+
+        .navbar ul {
+            overflow: auto;
+        }
+
+        .navbar li {
+            float: left;
+            list-style: none;
+            margin: 10px 20px;
+        }
+
+        .navbar li a {
+            text-decoration: none;
+            color: aliceblue;
+            padding: 3px 3px;
+        }
+
+        .bar {
+            float: right;
+            color: aliceblue;
+            padding: 10px 70px;
+        }
+        .navbar input{
+            border-radius: 9px;
+        }
+        .colo input{
+            color: rgb(0, 0, 0);
+            background-color: white; 
+            padding: 2px;
+            margin-top: 15px;
+        }
+        .colo textarea{
+            background-color: white;
+            border: 4px solid rgb(0, 0, 0);
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+        .outer label{
+            color: white;
+            border: 3px solid gray;
+            background-color: black;
+            padding: 5px;
+            margin-bottom: 3px;
+            border-radius: 3px;
+          
+        }
+        .outer label:hover {
+background-color: slategray;
+        }
+        .outer select option{
+            color: rgb(0, 0, 0);
+            background-color: aqua;
+            border-radius: 5px;
+        }
+        .outer select {
+            color: black;
+            background-color: rgb(255, 255, 255);
+            border-radius: 5px;
+            border: 3px solid black;
+        }
+        .hea{
+            color: rgb(255, 251, 0);
+            border: 4px solid purple;
+            background-color: rgb(184, 27, 184);
+            padding: 3px;
+            width: 50%;
+            margin: auto;
+            text-align: center;
+        }
+        .butto input{
+            color: white;
+            background-color: black;
+            margin: 5px;
+            padding: 4px;
+            border: 3px solid gray;
+            border-radius: 4px;
+        }
+        .butto input:hover{
+background-color: red;
+        }
+        .outerr{
+            border: 3px solid green;
+            background-color: aquamarine;
+            padding: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outerr">
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Service</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">Description</a></li>
+                <div class="bar">
+                    <input type="text" class="serach" id="search" placeholder="search">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <h2 class="hea">Froms in HTML</h2>
+    <form action="inform.php" class="outer">
+    <label for="name">Name</label>
+    <div class="colo">
+        <input type="text" name="myName" id="name">
+    </div>
+    <br>
+    <label for="role">Role</label>
+    <div class="colo">
+        <input type="text" name="myRole" id="role">
+    </div>
+    <br>
+    <label for="email">Email</label>
+    <div class="colo">
+        <input type="email" name="myEmail" id="email">
+    </div>
+    <br>
+    <label for="myself">Write something about your self</label>
+    <div class="colo">
+        <textarea name="myText" id="myself" cols="30" rows="10"></textarea>
+    </div>
+    <br>
+    <div class="colo">
+        <label for="eligibility">Are you Eligible?</label>
+        <input type="checkbox" name="myEligibility" id="eligibility">
+    </div>
+    <br>
+    <label for="sdate">Set Date</label>
+    <div class="colo">
+        <input type="date" name="myDate" id="sdate">
+    </div>
+    <br>
+    <div>
+        <label for="male">Male:</label>
+        <input type="radio" name="myGender" id="male">
+        <label for="female">Female:</label>
+        <input type="radio" name="myGender" id="female">
+        <label for="other">Other:</label>
+        <input type="radio" name="myGender" id="other">
+    </div>
+    <br>
+    <div class="colo">
+        <label for="car">Select Your Car:</label>
+        <select name="myCar" id="car">
+            <option value="cor">Corolla</option>
+            <option value="mer">Mercedes</option>
+            <option value="vitz">Vitz</option>
+        </select>
+    </div>
+    <br>
+    <div class="butto">
+        <input type="submit" value="Sign in">
+    </div>
+</form>
+</div>
+</body>
+
+</html>

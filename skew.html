@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cutted-button {
+            background-color: #4CAF50;
+            /* Green background */
+            border: none;
+            /* Remove border */
+            color: white;
+            /* White text */
+            padding: 15px 32px;
+            /* Some padding */
+            text-align: center;
+            /* Center the text */
+            text-decoration: none;
+            /* Remove underline */
+            display: inline-block;
+            /* Make the button inline */
+            font-size: 16px;
+            /* Set the font size */
+            border-radius: 8px;
+            /* Round the corners */
+            position: relative;
+            /* Enable positioning */
+            overflow: hidden;
+            /* Hide excess content */
+        }
+
+        /* Cut off the left and right sides of the button */
+        .cutted-button:before,
+        .cutted-button:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            /* Half the width of the button */
+            background-color: #4CAF50;
+            /* Same color as the button */
+        }
+
+        .cutted-button:before {
+            border: 2px solid red;
+            left: -50%;
+            /* Cut off the left side */
+            border-radius: 0 8px 8px 0;
+            /* Round the corners */
+        }
+
+        .cutted-button:after {
+            right: -50%;
+            /* Cut off the right side */
+            border-radius: 8px 0 0 8px;
+            /* Round the corners */
+        }
+    </style>
+</head>
+
+<body>
+    <button class="cutted-button">Click me</button>
+</body>
+
+</html>

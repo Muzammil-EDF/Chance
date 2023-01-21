@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <title>Food Blog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {}
+
+        .header {
+            background-color: white;
+            height: 80px;
+            width: 80%;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            font-size: 17px;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        .whole {
+            /* border: 2px solid red; */
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .row {
+            /* border: 2px solid green; */
+            margin-top: 60px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+        }
+
+        .column {
+            background-color: whitesmoke;
+            flex-basis: 20%;
+            margin-bottom: 30px;
+            text-align: left;
+            margin: 4px 10px;
+        }
+
+        .column img {
+            height: 280px;
+            width: 100%;
+        }
+
+        .column h1 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 18px;
+            text-align: center;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        .column p {
+            font-family: 'Darker Grotesque', sans-serif;
+            font-size: 17px;
+            padding: 0px 10px;
+            text-align: left;
+            line-height: 15px;
+        }
+        #col2{
+            padding-bottom: 20px;
+        }
+        @media (max-width:800px) {
+            .row{
+                flex-direction: column;
+            }
+            .column h1{
+                margin-top: 5px;
+                margin-bottom: 2px;
+            }
+            .column p{
+                margin-bottom: 40px;
+                text-align: center;
+            }
+            .header{
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <!-- --------------------NAVBAR------------------- -->
+
+    <section class="top">
+        <div class="header">
+            <div class="left">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="center">
+                <h1>My Food</h1>
+            </div>
+            <div class="right">
+                <h1>Mail</h1>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- -----------------------------GRID------------------------- -->
+
+
+    <section class="whole">
+        <div class="row">
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column" id="col2">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>Let me tell you about the streak</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>Cherries Interrupted</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>Once again,vegetable pasta</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column" id="col2">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+            <div class="column">
+                <img src="imge/photo-1568667256549-094345857637.jpg" alt="">
+                <h1>The perfect sandwitch</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi quos, praesssentium maiores quisquam
+                    nobis repellat amet illo minima.</p>
+            </div>
+        </div> -->
+    </section>
+</body>
+
+</html>

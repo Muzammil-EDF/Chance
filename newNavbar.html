@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-image: url('imge/eberhard-grossgasteiger-cs0sK0gzqCU-unsplash.jpg'); */
+            height: 5000px;
+            background-color: slategray;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            /* background-size: contain; */
+        }
+
+        .list {
+            display: flex;
+            margin: 14px 0px;
+            border: 2px solid white;
+            border-radius: 25px;
+            padding: 5px 2px;
+        }
+
+        .inner:hover {
+            background-color: rgb(167, 249, 86);
+            border-radius: 12px;
+            cursor: pointer;
+
+
+        }
+
+        .list li {
+            margin: 2px 30px;
+            overflow: auto;
+            color: white;
+            text-decoration: none;
+            padding: 4px 10px;
+            border-radius: 7px;
+        }
+
+        .left {
+            font-weight: 600;
+            font-size: xx-large;
+            color: white;
+            margin-left: 100px;
+            margin-top: 42px;
+        }
+
+        .left:hover {
+            color: rgb(167, 249, 86);
+            cursor: pointer;
+        }
+
+        .nav {
+            margin-right: 40px;
+            margin-top: 20px;
+        }
+
+        .container {
+            border: 2px solid white;
+            color: white;
+            width: 510px;
+            display: inline-block;
+            position: relative;
+            top: 240px;
+            left: 150px;
+
+        }
+
+        .container h1 {
+            font-size: xx-large;
+        }
+
+        .in {
+            /* border: 2px solid white; */
+            display: inline-block;
+            width: 393px;
+            color: rgb(255, 255, 255);
+            margin-top: 15px;
+            font-size: small;
+        }
+
+        .right {
+            position: relative;
+            float: right;
+            top: 160px;
+            right: 200px;
+            background-size: cover;
+
+        }
+
+        .big {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cont {
+            display: flex;
+            border: 2px solid white;
+            justify-content: space-evenly;
+            position: relative;
+            top: 6%;
+            flex-wrap: wrap;
+        }
+
+        .cont img {
+            width: 200px;
+            height: 200px;
+            margin: 15px 0px;
+            border-radius: 125px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="left">Fitness Club</div>
+        <nav class="nav">
+            <ul class="list">
+                <li class="inner">Home</li>
+                <li class="inner">Blog</li>
+                <li class="inner">Showcase</li>
+                <li class="inner">About</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>
+            We are providing you your all time favourite accessories
+        </h1>
+        <div class="in">
+
+            Lorem ipsum dolor sit amet consec Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto ad
+            tempora repellat repellendus impedit harum saepe libero aliquam id voluptate.tetur adipisicing elit. Est,
+            beatae.
+        </div>
+    </div>
+</body>
+
+</html>
