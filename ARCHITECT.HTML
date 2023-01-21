@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        header::before {
+            background: url('imge/bg.jpg.jpg') no-repeat center center/cover;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 400px;
+            opacity: 0.6;
+        }
+
+        .left {
+            /* border: 2px solid red; */
+            margin-left: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 165px;
+        }
+
+        .left img {
+            filter: invert(100);
+        }
+
+        .navbar {
+            background-color: rgb(9, 154, 154);
+            z-index: 2;
+            padding: 5px 0px;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .list {
+            /* border: 2px solid red; */
+            display: flex;
+            list-style: none;
+            margin-right: 50px;
+            width: 350px;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .list li {
+            padding: 3px 3px;
+            font-size: 18px;
+            margin: 0px 5px;
+        }
+
+        .list li:hover {
+            background-image: linear-gradient(to top right, #ff00f7, #bf00ff 70%);
+        }
+
+        .heading {
+            display: flex;
+        }
+
+        .heading h1 {
+            display: flex;
+            color: white;
+            position: absolute;
+            top: 330px;
+            left: 550px;
+        }
+
+        .img h1 {
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        section {
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            position: absolute;
+            top: 200px;
+
+        }
+
+        section h1 {
+            margin-left: 10px;
+            color: white;
+            width: 165px;
+        }
+
+        section img {
+            border: 2px solid rgb(0, 255, 38);
+            padding: 5px 5px;
+            filter: invert(100);
+        }
+
+        .big {
+            /* border: 2px solid rgb(255, 0, 0); */
+            position: relative;
+            top: 391px;
+            height: 290px;
+            width: 100vw;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .big h1 {
+            color: black;
+            font-size: 30px;
+            margin: 30px;
+        }
+
+        .picture {
+            /* border: 2px solid blue; */
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            padding: 8px 10px;
+            justify-content: space-between;
+        }
+
+        .pic {
+            background-image: url('imge/bg.jpg.jpg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 133px;
+            width: 200px;
+        }
+
+        .pic p {
+            color: white;
+            background-color: chartreuse;
+        }
+
+        @media (max-width:1220px) {
+            .picture {
+                justify-content: center;
+            }
+
+            .pic {
+
+                margin: 0px 2px;
+            }
+        }
+
+        @media (max-width:1074px) {
+            .big {
+                height: 386px;
+            }
+
+            .pic {
+                margin: 5px 2px;
+            }
+        }
+
+        @media (max-width:645px) {
+            .big {
+                height: 550px;
+            }
+        }
+
+        @media (max-width:435px) {
+            .big {
+                height: 850px;
+            }
+        }
+
+        @media (max-width:800px) {
+            .list li {
+                font-size: 16px;
+            }
+
+            .list {
+                margin-right: 10px;
+
+            }
+
+            .left {
+                margin-left: 20px;
+            }
+
+        }
+
+        @media (max-width:750px) {
+            .list li {
+                font-size: 14px;
+            }
+
+            .list {
+                margin-right: 10px;
+            }
+
+            .left {
+                margin-left: 20px;
+            }
+        }
+
+        @media (max-width:630px) {
+            .list {
+                width: 270px;
+                margin-left: 8px;
+            }
+        }
+
+        @media (max-width:500px) {
+            .list {
+                display: none;
+            }
+            section h1{
+                display: none;
+            }
+
+            .navbar {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="left">
+                <img src="imge/icons8-huawei-logo-32.png" alt="">
+                <label for="">ARCHITECTURE</label>
+            </div>
+            <ul class="list">
+                <li>Home</li>
+                <li>Blog</li>
+                <li>Showcase</li>
+                <li>Contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <img src="imge/icons8-huawei-logo-32.png" alt="">
+        <h1>Architects</h1>
+    </section>
+    <div class="big">
+        <h1>
+            Projects
+        </h1>
+        <div class="picture">
+            <div class="pic" id="pic1">
+                <p>
+                    Summer House
+                </p>
+            </div>
+            <div class="pic" id="pic2">
+                <p>
+                    Brick House
+                </p>
+            </div>
+            <div class="pic" id="pic3">
+                <p>
+                    Renovate House
+                </p>
+            </div>
+            <div class="pic" id="pic4">
+                <p>
+                    Renovate House
+                </p>
+            </div>
+            <div class="pic" id="pic5">
+                <p>
+                    Renovate House
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

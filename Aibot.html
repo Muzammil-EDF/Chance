@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #DBE0E6;
+        }
+
+
+        header {
+            /* border: 1px solid black; */
+            /* height: 200px; */
+            width: 100%;
+            padding: 30px 25px 5px 15px;
+            display: grid;
+            gap: 5px;
+            grid-area: header;
+            grid-template-areas:
+                'logo search-bar nav nav'
+                'logo search-bar nav nav'
+                'logo search-bar nav nav'
+                'logo list list list'
+            ;
+        }
+
+        .logo {
+            /* background-color: red; */
+            grid-area: logo;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo img {
+            /* border: 2px solid yellow; */
+            height: 110px;
+            width: 190px;
+        }
+
+        .search-bar {
+            /* background-color: rgb(0, 255, 4); */
+            border: 2px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: search-bar;
+            position: relative;
+        }
+
+        .search-bar input {
+            border: none;
+            overflow: hidden;
+            color: white;
+            background: transparent;
+            padding: 2px 5px;
+            height: 100%;
+            width: 100%;
+        }
+
+        .search-bar button {
+            background-color: #FFDB58;
+            font-size: 16px;
+            color: white;
+            border: none;
+            height: 70%;
+            width: 15%;
+            position: absolute;
+            right: 10px;
+            border-right: 2px solid black;
+            border-bottom: 1px solid black;
+        }
+
+        nav {
+            padding: 5px 10px 5px 10px;
+            /* background-color: rgb(47, 255, 189); */
+            grid-area: nav;
+        }
+
+        nav ul {
+            /* border: 1px solid red; */
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .location-box {
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 3px;
+            align-items: center;
+        }
+
+        .location-icon i {
+            /* border: 1px solid rgb(55, 0, 255); */
+            padding: 2px 2px;
+            font-size: 35px;
+            color: black;
+        }
+
+        .location-write {
+            color: black;
+            /* border: 1px solid rgb(255, 255, 0); */
+            font-size: 12px;
+            padding: 2px 2px;
+            letter-spacing: 1px;
+        }
+
+        .contact-box {
+            /* border: 1px solid red; */
+            display: flex;
+            gap: 3px;
+            align-items: center;
+        }
+
+        .contact-icon i {
+            /* border: 1px solid rgb(55, 0, 255); */
+            padding: 2px 2px;
+            font-size: 35px;
+            color: black;
+        }
+
+        .contact-write {
+            color: black;
+            /* border: 1px solid rgb(255, 255, 0); */
+            font-size: 12px;
+            padding: 2px 2px;
+            letter-spacing: 1px;
+        }
+
+        nav ul li {
+            font-size: 35px;
+            color: black;
+
+            /* border: 1px solid yellow; */
+        }
+
+        .list {
+            /* background-color: rgb(255, 162, 235); */
+            padding: 3px 10px 3px 10px;
+            grid-area: list;
+            margin-top: 10px;
+        }
+
+        .list ul {
+            color: black;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bar-icon {
+            font-size: 20px;
+            background-color: #FFDB58;
+            padding: 9px 12px;
+            border-radius: 50%;
+        }
+
+        main {
+            grid-area: main;
+            height: 100vh;
+            width: 100%;
+            margin: auto;
+            /* margin: 0px 10px 0px 10px; */
+        }
+
+        .section-1 {
+            /* border: 2px solid black; */
+            height: 100vh;
+            width: 100%;
+            margin: 20px 0px;
+            display: grid;
+            gap: 10px;
+            padding: 20px 40px;
+            grid-template-columns: 2fr 2fr 2fr;
+            grid-template-rows: 2fr 2fr;
+            grid-template-areas:
+                'class-1 class-2 class-2'
+                'class-1 class-3 class-4'
+            ;
+        }
+
+        .class-1 {
+            /* border: 1px solid yellow; */
+            position: relative;
+            grid-area: class-1;
+        }
+
+        .class-1 img {
+            border-radius: 15px;
+            /* border: 1px solid rgb(255, 196, 0); */
+            position: absolute;
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+
+        .class-2 {
+            /* border: 1px solid blue; */
+            position: relative;
+            grid-area: class-2;
+        }
+
+        .class-2 img {
+            border-radius: 15px;
+            /* border: 1px solid rgb(10, 10, 140); */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .class-3 {
+            /* border: 1px solid purple; */
+            position: relative;
+            grid-area: class-3;
+        }
+
+        .class-3 img {
+            border-radius: 15px;
+            /* border: 1px solid rgb(222, 10, 222); */
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .class-4 {
+            /* border: 1px solid red; */
+            position: relative;
+            grid-area: class-4;
+        }
+
+        .class-4 img {
+            border-radius: 15px;
+            /* border: 1px solid rgb(255, 112, 112); */
+            object-fit: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* ---------------------------------------------------TODO:------------SECTION-2 ----------------------------------------------- */
+        .section-2 {
+            /* border: 2px solid rgb(199, 211, 40); */
+            width: 100%;
+            padding: 5px 20px;
+        }
+
+        .section-2 ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .boxes {
+            /* border: 2px solid black; */
+            background-color: #FFDB58;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            padding: 4px 30px;
+        }
+
+        .box-1-icon {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .box-1-write {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            color: white;
+        }
+
+        .box-2-icon {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .box-2-write {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            color: white;
+        }
+
+        .box-3-icon {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .box-3-write {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            color: white;
+        }
+
+        .box-4-icon {
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+            font-size: 35px;
+            color: white;
+        }
+
+        .box-4-write {
+            color: white;
+            /* border: 1px solid blue; */
+            padding: 5px 5px;
+        }
+
+        /* -----------------------------------SECTION-3------------------------------------- */
+        .section-3 {
+            /* border: 2px solid yellowgreen; */
+            /* height: 100vh; */
+            width: 100%;
+            padding: 15px 15px;
+            margin-top: 15px;
+        }
+
+        .section-3::before {
+            color: black;
+            /* background-color: aqua; */
+            content: 'Featured Products';
+            font-size: 40px;
+            padding: 0px 5px;
+        }
+
+        .section-3 ul {
+            margin-top: 30px;
+            list-style: none;
+            display: grid;
+            gap: 5px;
+            padding: 5px;
+            grid-template-columns: 2fr 2fr 2fr 2fr;
+            grid-template-areas:
+                'featured-box-1 featured-box-2 featured-box-3 featured-box-4'
+                'featured-box-1 featured-box-2 featured-box-3 featured-box-4'
+                'featured-box-5 featured-box-5 featured-box-5 featured-box-5'
+                'featured-box-5 featured-box-5 featured-box-5 featured-box-5'
+            ;
+        }
+
+        /* -----------------------------------FEATURED-BOX-1------------------------------------- */
+        .featured-box-1 {
+            border: 2px solid #FFDB58;
+            grid-area: featured-box-1;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .featured-box-1-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+            border: none;
+        }
+
+        .featured-box-1-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .featured-box-1-write {
+            /* border: 1px solid black; */
+            color: #FFDB58;
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+        }
+
+        .featured-box-1-write button {
+            position: absolute;
+            width: 300px;
+            padding: 8px 10px;
+            margin: 15px 0px 0px 0px;
+            color: white;
+            border: none;
+            background-color: #FFDB58;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FEATURED-BOX-2------------------------------------- */
+        .featured-box-2 {
+            border: 2px solid #FFDB58;
+            grid-area: featured-box-2;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .featured-box-2-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .featured-box-2-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .featured-box-2-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            color: #FFDB58;
+            bottom: 55px;
+        }
+
+        .featured-box-2-write button {
+            position: absolute;
+            width: 300px;
+            margin: 15px 0px 0px 0px;
+            padding: 8px 10px;
+            color: white;
+            border: none;
+            background-color: #FFDB58;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FEATURED-BOX-3------------------------------------- */
+        .featured-box-3 {
+            border: 2px solid #FFDB58;
+            grid-area: featured-box-3;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .featured-box-3-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .featured-box-3-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .featured-box-3-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            color: #FFDB58;
+            bottom: 55px;
+        }
+
+        .featured-box-3-write button {
+            position: absolute;
+            width: 300px;
+            padding: 8px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+
+        /* -----------------------------------FEATURED-BOX-4------------------------------------- */
+        .featured-box-4 {
+            border: 2px solid #FFDB58;
+            grid-area: featured-box-4;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .featured-box-4-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+
+        .featured-box-4-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .featured-box-4-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            color: #FFDB58;
+            bottom: 55px;
+        }
+
+        .featured-box-4-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+
+        /* -----------------------------------FEATURED-BOX-5------------------------------------- */
+        .featured-box-5 {
+            grid-area: featured-box-5;
+            height: 350px;
+            position: relative;
+            background: repeating-linear-gradient(45deg,
+                    #DBE0E6,
+                    #DBE0E6 10px,
+                    #FFDB58 10px,
+                    #FFDB58 20px);
+        }
+
+        .featured-box-5-picture {
+            /* border: 2px solid rgb(0, 255, 55); */
+            position: relative;
+            height: 80%;
+            width: 50%;
+            top: 40px;
+            left: 30px;
+        }
+
+        .featured-box-5-picture img {
+            position: absolute;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+            border-bottom: 4px solid black;
+            border-right: 4px solid black;
+        }
+
+        .featured-box-5-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            color: black;
+            top: 26%;
+            right: 5%;
+        }
+
+        .featured-box-5-write h1 {
+            padding: 0px 0px 10px 0px;
+            font-size: 50px;
+        }
+
+        .featured-box-5-write h3 {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .featured-box-5-write button {
+            font-size: 20px;
+            padding: 5px;
+            width: 50%;
+            background-color: #FFDB58;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            border-bottom: 2px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------SECTION-4------------------------------------- */
+        .section-4 {
+            /* border: 2px solid hotpink; */
+            /* height: 100vh; */
+            width: 100%;
+            padding: 15px 15px;
+            margin-top: 15px;
+        }
+
+        .section-4::before {
+            /* background-color: aqua; */
+            content: 'For-You-Products';
+            color: black;
+            font-size: 40px;
+            padding: 0px 5px;
+        }
+
+        .section-4 ul {
+            margin-top: 30px;
+            list-style: none;
+            display: grid;
+            gap: 10px;
+            padding: 5px;
+            grid-template-columns: 2fr 2fr 2fr 2fr;
+            grid-template-areas:
+                'for-you-product-1 for-you-product-2 for-you-product-3 for-you-product-4'
+                'for-you-product-1 for-you-product-2 for-you-product-3 for-you-product-4'
+                'for-you-product-5 for-you-product-6 for-you-product-7 for-you-product-8'
+                'for-you-product-5 for-you-product-6 for-you-product-7 for-you-product-8'
+            ;
+        }
+
+        /* -----------------------------------FOR-YOU-PRODUCT-1------------------------------------- */
+        .for-you-product-1 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-1;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-1-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .for-you-product-1-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-1-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-1-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FOR-YOU-PRODUCT-2------------------------------------- */
+        .for-you-product-2 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-2;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-2-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .for-you-product-2-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-2-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-2-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FOR-YOU-PRODUCT-3------------------------------------- */
+        .for-you-product-3 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-3;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-3-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .for-you-product-3-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-3-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-3-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+
+        /* -----------------------------------FOR-YOU-PRODUCT-4------------------------------------- */
+        .for-you-product-4 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-4;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-4-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+
+        .for-you-product-4-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-4-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-4-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FOR-YOU-PRODUCT-5------------------------------------- */
+        .for-you-product-5 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-5;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-5-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .for-you-product-5-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-5-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-5-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FOR-YOU-PRODUCT-6------------------------------------- */
+        .for-you-product-6 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-6;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-6-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .for-you-product-6-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-6-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-6-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        /* -----------------------------------FOR-YOU-PRODUCT-7------------------------------------- */
+        .for-you-product-7 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-7;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-7-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+        .for-you-product-7-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-7-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-7-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+
+        /* -----------------------------------FOR-YOU-PRODUCT-8------------------------------------- */
+        .for-you-product-8 {
+            border: 2px solid #FFDB58;
+            grid-area: for-you-product-8;
+            position: relative;
+            padding: 5px;
+            text-align: left;
+        }
+
+        .for-you-product-8-tag {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #FFDB58;
+            color: white;
+            padding: 8px;
+        }
+
+
+        .for-you-product-8-picture img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .for-you-product-8-write {
+            /* border: 1px solid black; */
+            position: absolute;
+            left: 10px;
+            bottom: 55px;
+            color: #FFDB58;
+        }
+
+        .for-you-product-8-write button {
+            position: absolute;
+            width: 300px;
+            padding: 5px 10px;
+            margin: 15px 0px 0px 0px;
+            background-color: #FFDB58;
+            border: none;
+            color: white;
+            border-bottom: 1px solid black;
+            border-right: 2px solid black;
+        }
+
+        .section-5 {
+            gap: 10px;
+            border: none;
+            padding: 15px 0px 20px 0px;
+            display: flex;
+            align-items: flex-start;
+            background-color: rgb(128, 128, 128, 0.2);
+        }
+
+        .section-5-side-box {
+            /* border: 2px solid yellow; */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 10px;
+        }
+
+        .section-5-side-box img {
+            /* border: 2px solid yellow; */
+            height: 120px;
+            width: 200px;
+        }
+
+        .section-5-side-box p {
+            padding: 3px 0px 3px 5px;
+        }
+
+        .section-5 ul {
+            /* border: 2px solid rgb(25, 0, 255); */
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-grow: 1;
+            list-style: none;
+        }
+
+        /* -------------------------Inner-Ul--------------------------------------- */
+        .inner-ul-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .inner-ul-2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .inner-ul-3 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .inner-ul-4 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+
+        .inner-ul-4-search-bar {
+            border: 1px solid black;
+            /* padding: 5px 0px 5px 0px; */
+        }
+
+        .inner-ul-4-search-bar input {
+            background: transparent;
+            padding: 0px 0px 0px 4px;
+            border: none;
+            height: 20px;
+            width: 88%;
+        }
+
+        .inner-ul-4-search-bar button {
+            background: transparent;
+            padding: 2px;
+            border: none;
+        }
+
+        .inner-ul-4-icon {
+            padding: 10px 0px 10px 0px;
+        }
+
+        .inner-ul-4-icon i {
+            /* border: 1px solid red; */
+            padding: 3px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- logo -->
+        <div class="logo">
+            <img src="imge/pngwing.com (9).png" alt="">
+        </div>
+        <!-- search-bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <!-- nav-bar -->
+        <nav>
+            <ul>
+                <li class="location-box">
+                    <div class="location-icon">
+                        <i class="fa fa-map-marker"></i>
+                    </div>
+                    <div class="location-write">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem im dolor</p>
+                    </div>
+                </li>
+                <li class="contact-box">
+                    <div class="contact-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="contact-write">
+                        <p>Lorem ipsum dolor</p>
+                        <p>Lorem im dolor</p>
+                    </div>
+                </li>
+                <li>
+                    <i class="fa fa-shopping-cart"></i>
+                </li>
+                <li>
+                    <i class="fa fa-heart"></i>
+                </li>
+            </ul>
+            <!-- down-list -->
+        </nav>
+        <div class="list">
+            <ul>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li>home</li>
+                <li class="bar-icon"><i class="fa fa-bars"></i></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <!-- First page -->
+        <section class="section-1">
+            <div class="class-1">
+                <img src="imge/headphones.jpg">
+            </div>
+            <div class="class-2">
+                <img src="imge/gpc.jpg">
+            </div>
+            <div class="class-3">
+                <img src="imge/mobile.jpg">
+            </div>
+            <div class="class-4">
+                <img src="imge/shoes.jpg">
+            </div>
+        </section>
+        <section class="section-2">
+            <ul>
+                <li class="boxes">
+                    <div class="box-1-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="box-1-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                    </div>
+                </li>
+                <li class="boxes">
+                    <div class="box-2-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="box-2-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                    </div>
+                </li>
+                <li class="boxes">
+                    <div class="box-3-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="box-3-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                    </div>
+                </li>
+                <li class="boxes">
+                    <div class="box-4-icon">
+                        <i class="fa fa-phone"></i>
+                    </div>
+                    <div class="box-4-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- ------------------------------------------------------SECTION-3--------------------------------------------- -->
+        <section class="section-3">
+            <ul>
+                <!-- ---------------------------------ONE----------------------------- -->
+                <li class="featured-box-1">
+                    <div class="featured-box-1-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="featured-box-1-picture">
+                        <img src="imge/shoes.jpg" alt="">
+                    </div>
+                    <div class="featured-box-1-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------TWO----------------------------- -->
+                <li class="featured-box-2">
+                    <div class="featured-box-2-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="featured-box-2-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="featured-box-2-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------THREE----------------------------- -->
+                <li class="featured-box-3">
+                    <div class="featured-box-3-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="featured-box-3-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="featured-box-3-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------FOUR----------------------------- -->
+                <li class="featured-box-4">
+                    <div class="featured-box-4-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="featured-box-4-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="featured-box-4-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------FIVE----------------------------- -->
+                <li class="featured-box-5">
+                    <div class="featured-box-5-picture">
+                        <img src="imge/gpc.jpg" alt="">
+                    </div>
+                    <div class="featured-box-5-write">
+                        <h1>Best Gaming PC For The <br> Gamer Intel Core i7</h1>
+                        <h3>$150,000</h3>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- ------------------------------------------------------SECTION-4--------------------------------------------- -->
+        <section class="section-4">
+            <ul>
+                <!-- ---------------------------------ONE----------------------------- -->
+                <li class="for-you-product-1">
+                    <div class="for-you-product-1-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-1-picture">
+                        <img src="imge/shoes.jpg" alt="">
+                    </div>
+                    <div class="for-you-product-1-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------TWO----------------------------- -->
+                <li class="for-you-product-2">
+                    <div class="for-you-product-2-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-2-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="for-you-product-2-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------THREE----------------------------- -->
+                <li class="for-you-product-3">
+                    <div class="for-you-product-3-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-3-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="for-you-product-3-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------FOUR----------------------------- -->
+                <li class="for-you-product-4">
+                    <div class="for-you-product-4-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-4-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="for-you-product-4-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------FIVE----------------------------- -->
+                <li class="for-you-product-5">
+                    <div class="for-you-product-5-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-5-picture">
+                        <img src="imge/shoes.jpg" alt="">
+                    </div>
+                    <div class="for-you-product-5-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------SIX----------------------------- -->
+                <li class="for-you-product-6">
+                    <div class="for-you-product-6-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-6-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="for-you-product-6-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------SEVEN----------------------------- -->
+                <li class="for-you-product-7">
+                    <div class="for-you-product-7-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-7-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="for-you-product-7-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+                <!-- ---------------------------------EIGHT----------------------------- -->
+                <li class="for-you-product-8">
+                    <div class="for-you-product-8-tag">
+                        <p>292 Product</p>
+                    </div>
+                    <div class="for-you-product-8-picture">
+                        <img src="imge/shoes.jpg">
+                    </div>
+                    <div class="for-you-product-8-write">
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Lorem ipsum dol.</p>
+                        <button>Shop Now</button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="section-5">
+            <div class="section-5-side-box">
+                <img src="imge/pngwing.com (9).png">
+                <p>Lorem ipsum dolor sit <br> Lorem, ipsum dolor <br> Lorem, ipsum dolor.</p>
+            </div>
+            <ul class="footer-list">
+                <li>
+                    <ul class="inner-ul-1">
+                        <h2>Find Us AT</h2>
+                        <li>name</li>
+                        <li>name</li>
+                        <li>name</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="inner-ul-2">
+                        <h2>Information</h2>
+                        <li>name</li>
+                        <li>name</li>
+                        <li>name</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="inner-ul-3">
+                        <h2>Quick Link</h2>
+                        <li>name</li>
+                        <li>name</li>
+                        <li>name</li>
+                        <li>name</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="inner-ul-4">
+                        <h2>News Letters</h2>
+                        <div class="inner-ul-4-search-bar">
+                            <input type="text" placeholder="Search.." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                        <div class="inner-ul-4-icon">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-google"></i>
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-youtube"></i>
+                            <i class="fa fa-instagram"></i>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
